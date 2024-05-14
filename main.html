@@ -10,7 +10,18 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			let big = -Infinity,  sBig = -Infinity;
+
+			for(let t of arr){
+				if(t>big){
+					sBig = big;
+					big = t;
+				}
+				else if (t>sBig && t!=big){
+					sBig = t;
+				}
+			}
+			return sBig;
 		}
 
 		function Main() {
